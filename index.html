@@ -42,8 +42,23 @@
         text-transform: uppercase;
       }
       .box small {
-        font-size: 5px;
+        font-size: 7px;
+        -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 10s; /* Firefox < 16 */
+        -ms-animation: fadein 10s; /* Internet Explorer */
+        -o-animation: fadein 10s; /* Opera < 12.1 */
+        animation: fadein 10s;
       }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
       .box h2 {
         position: absolute;
         width: 100%;
