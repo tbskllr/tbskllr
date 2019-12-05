@@ -41,6 +41,9 @@
         text-align: center;
         text-transform: uppercase;
       }
+      .box small {
+        font-size: 5px;
+      }
       .box h2 {
         position: absolute;
         width: 100%;
@@ -48,6 +51,12 @@
         transform: translateX(-2000%);
         transition: all 0.5s;
         top: 0;
+      }
+
+      .box small {
+        display: block;
+        font-size: 11px;
+        text-align: center;
       }
 
       .box ul {
@@ -84,7 +93,7 @@
         display: none;
       }
 
-      .box.open > h1 {
+      .box.opening > small {
         display: none;
       }
 
@@ -108,7 +117,8 @@
 
     <div class="wrap">
       <div class="box">
-        <h1>Click me</h1>
+        <h1>Who is Tobias Keller?</h1>
+        <small>(Click Me)</small>
         <h2>Tobias Keller</h2>
         <ul class="social-icons">
           <li>
