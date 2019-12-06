@@ -117,8 +117,9 @@
 
       .box small {
         font-size: 0.8em;
-        animation: fadein 20s;
+        animation: fadein 12s;
       }
+
       @keyframes fadein {
         from {
           opacity: 0;
@@ -126,6 +127,20 @@
         to {
           opacity: 1;
         }
+      }
+      h3 {
+        font-size: calc(9px + 1vw);
+      }
+      span {
+        font-size: calc(9px + 1vw);
+      }
+      .app {
+        transform: translateX(-2000%);
+        transition: all 0.5s;
+        border: solid white 3px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        margin: 20px;
       }
     </style>
 
@@ -169,7 +184,43 @@
         </p>
       </div>
       <div class="box content code">
-        <h2>Code Examples</h2>
+        <h2>Sample Apps</h2>
+        <div class="app">
+          <span>
+            <h3>• feinwort. - A personal hompage</h3>
+            My first forray into GraphQL & NodeJS. The frontend is made with
+            React.
+            <br />
+            <br />
+            <a href="http://www.feinwort.eu" target="_blank"
+              >→ Check out the deployed version</a
+            >
+            <br />
+            <br />
+            <a href="https://github.com/tbskllr/feinwort" target="_blank"
+              >→ See the code on Github</a
+            >
+          </span>
+        </div>
+        <div class="app">
+          <span>
+            <h3>• Podcast Finder</h3>
+            A simple app that lets you search through a curated list of tech
+            podcasts. Made with React.
+            <br />
+            <br />
+            <a
+              href="https://podcast-finder.tbskllr.now.sh/podcast-finder.html"
+              target="_blank"
+              >→ Check out the deployed version</a
+            >
+            <br />
+            <br />
+            <a href="https://github.com/tbskllr/podcast-finder" target="_blank"
+              >→ See the code on Github</a
+            >
+          </span>
+        </div>
       </div>
     </div>
 
