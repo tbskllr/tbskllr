@@ -8,6 +8,9 @@
 
   <body>
     <style>
+      a {
+        color: white;
+      }
       .wrap {
         min-height: 100vh;
         display: flex;
@@ -39,24 +42,7 @@
         color: white;
         display: block;
         text-align: center;
-        text-transform: uppercase;
-      }
-      .box small {
-        font-size: 7px;
-        -webkit-animation: fadein 10s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 10s; /* Firefox < 16 */
-        -ms-animation: fadein 10s; /* Internet Explorer */
-        -o-animation: fadein 10s; /* Opera < 12.1 */
-        animation: fadein 10s;
-      }
-
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        text-transform: lowercase;
       }
 
       .box h2 {
@@ -128,26 +114,45 @@
       .code {
         background: green;
       }
+
+      .box small {
+        font-size: 0.8em;
+        animation: fadein 20s;
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
 
     <div class="wrap">
       <div class="box">
-        <h1>Who is Tobias Keller?</h1>
+        <h1>tbskllr.co</h1>
         <small>(Click Me)</small>
         <h2>Tobias Keller</h2>
         <ul class="social-icons">
           <li>
-            <a href="https://www.github.com/tbskllr"
+            <a href="https://www.github.com/tbskllr" target="_blank"
               ><img class="img" src="images/GitHub-Mark-Light-64px.png"
             /></a>
           </li>
           <li>
-            <a class="img" href="https://www.twitter.com/tobi_keller"
+            <a
+              class="img"
+              href="https://www.twitter.com/tobi_keller"
+              target="_blank"
               ><img src="images/Twitter_Social_Icon_Circle_Color.png"
             /></a>
           </li>
           <li>
-            <a class="img" href="https://www.medium.com/@tbskllr"
+            <a
+              class="img"
+              href="https://www.medium.com/@tbskllr"
+              target="_blank"
               ><img src="images/medium-512.png"
             /></a>
           </li>
@@ -158,8 +163,9 @@
         <br />
         <p>
           I'm currently working in television as a Digital Content Manager /
-          Online Editor and looking to break into web development. Download my
-          CV here - and check out my code samples below.
+          Online Editor and looking to break into web development. Download
+          <a href="https://www.example.com" target="_blank"> my CV here </a>-
+          and check out my code samples below.
         </p>
       </div>
       <div class="box content code">
@@ -172,14 +178,9 @@
       boxes.forEach(box =>
         box.addEventListener("click", function() {
           boxes.forEach(function(box) {
-            let first = "opening";
-            let second = "open";
-            if (box.classList.contains(first)) {
-              [first, second] = [second, first];
-            }
-            box.classList.toggle(first);
+            box.classList.add("opening");
             setTimeout(() => {
-              box.classList.toggle(second);
+              box.classList.add("open");
             }, 250);
           });
         })
