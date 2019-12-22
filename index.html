@@ -8,8 +8,11 @@
 
   <body>
     <style>
+      body {
+        background: #fdfdfd;
+      }
       a {
-        color: white;
+        color: #030303;
       }
       .wrap {
         min-height: 100vh;
@@ -19,13 +22,13 @@
         flex-direction: column;
         font-family: sans-serif;
         font-weight: 100;
-        color: white;
+        color: #fdfdfd;
         max-width: 100vw;
         overflow-x: hidden;
       }
 
       .box {
-        background: black center fixed no-repeat;
+        background: #030303 center fixed no-repeat;
         width: 150px;
         height: 150px;
         padding: 5vw;
@@ -43,7 +46,7 @@
         height: 100%;
       }
       .box h1 {
-        color: white;
+        color: #fdfdfd;
         display: block;
         text-align: center;
         text-transform: lowercase;
@@ -112,11 +115,13 @@
       }
 
       .about {
-        background: #66023c;
+        background: #fabc05;
+        color: black;
       }
 
       .code {
-        background: #228b22;
+        background: #34a853;
+        color: black;
       }
 
       .box small {
@@ -141,10 +146,15 @@
       .app {
         transform: translateX(-2000%);
         transition: all 0.5s;
-        border: solid white 3px;
+        border: solid lightgrey 0.5px;
+        border-radius: 20px;
         padding-left: 10px;
         padding-bottom: 10px;
         margin: 1vh;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
       }
     </style>
 
@@ -202,7 +212,7 @@
             <h3>• feinwort. - A personal hompage</h3>
             My first forray into GraphQL & NodeJS. The frontend is made with
             React and NextJS. It features sign-in functionality and an upload
-            form. The user and item data are stored in Prisma database.
+            form. The user and item data are stored in a Prisma database.
             <br />
             <br />
             <a href="http://www.feinwort.eu" target="_blank"
